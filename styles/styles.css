@@ -9,6 +9,17 @@
   --color-primary: #292d3e;
   --color-secondary: #f0aa71;
   --color-third: #a6accd;
+  --color-white: #454e56;
+  --color-grey-0: #f8f8f8;
+  --color-grey-1: #dbe1e8;
+  --color-grey-2: #b2becd;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #2a2e35;
+  --color-grey-6: #12181b;
+  --br-sm-2: 14px;
+  --transition: all 0.4s ease-in-out;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -20,15 +31,40 @@ body {
 }
 
 header {
-  height: 100vh;
-  color: white;
+  min-height: 100vh;
+  color: var(--color-white);
   overflow: hidden;
 }
 
-h1,
-h2,
-h3 {
-  color: var(--color-secondary);
+.controls {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+.control {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--color-grey-4);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+  box-shadow: var(--box-shadow-1);
+}
+.control i {
+  font-size: 1.2rem;
+  color: var(--color-third);
+  pointer-events: none;
 }
 
 .header-content {
@@ -36,12 +72,12 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
 }
-.header-content .left-header {
+.left-header {
   display: flex;
   align-items: center;
   position: relative;
 }
-.header-content .left-header .h-shape {
+.h-shape {
   transition: var(--transition);
   width: 65%;
   height: 100%;
@@ -53,15 +89,14 @@ h3 {
   -webkit-clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
   clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 }
-.header-content .left-header .image {
+.left-header .image {
   border-radius: var(--br-sm-2);
   height: 90%;
   width: 68%;
   margin-left: 4rem;
-  background-color: black;
   transition: var(--transition);
 }
-.header-content .left-header .image img {
+.left-header .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -72,19 +107,19 @@ h3 {
 .header-content .left-header .image img:hover {
   filter: grayscale(0);
 }
-.header-content .right-header {
+.right-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-right: 18rem;
 }
-.header-content .right-header .name {
+.right-header .name {
   font-size: 3rem;
 }
-.header-content .right-header .name span {
+.right-header .name span {
   color: var(--color-secondary);
 }
-.header-content .right-header p {
+.right-header p {
   margin: 2rem;
   line-height: 2 rem;
   color: var(--color-third);
@@ -93,4 +128,47 @@ h3 {
 img {
   border-radius: 10px;
   box-shadow: var(--box-shadow-1);
+}
+
+@media screen and (max-width: 1070px) {
+  header {
+    padding: 0;
+  }
+  header .right-header {
+    padding: 0 !important;
+  }
+
+  .header-content {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .h-shape {
+    display: none;
+  }
+  .right-header {
+    grid-row: 1;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .right-header .name {
+    font-size: 2.5rem !important;
+    text-align: center;
+  }
+  .header-content .left-header .image {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .controls {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-grey-5);
+  }
+  .controls .control {
+    margin: 1rem 0.3rem;
+  }
 }
