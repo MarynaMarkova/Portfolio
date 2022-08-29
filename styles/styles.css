@@ -11,7 +11,7 @@
   --color-third: #a6accd;
   --color-white: white;
   --color-grey-0: #f8f8f8;
-  --color-grey-1: #dbe1e8;
+  --color-grey-1: #dae0e7;
   --color-grey-2: #b2becd;
   --color-grey-3: #6c7983;
   --color-grey-4: #454e56;
@@ -600,6 +600,12 @@ h4.stat-title {
   padding-bottom: 1rem;
 }
 
+.blogs .blog .blog-text p a{
+color: var(--color-grey-1);}
+
+.blogs .blog .blog-text p a:hover {
+  color: var(--color-secondary)}
+
 .contact-content-con {
   display: flex;
   padding-top: 3.5rem;
@@ -791,7 +797,7 @@ h4.stat-title {
   font-size: 6.1rem;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   header {
     padding: 0;
   }
@@ -845,10 +851,7 @@ h4.stat-title {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
-  .blogs {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
+  
   .contact-content-con {
     flex-direction: column;
   }
@@ -890,123 +893,7 @@ h4.stat-title {
   }
 }
 
-
-@media screen and (max-width: 600px) {
-  .about-container {
-    grid-template-columns: 1fr;
-    .right-about {
-      grid-template-columns: 1fr;
-      padding-top: 2.5rem;
-    }
-    .left-about {
-      padding-right: 0;
-      p {
-        padding-left: 0;
-      }
-    }
-  }
-
-  .timeline {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-
-
-  .portfolios {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-
-  .blogs {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-
-  .contact-content-con {
-    flex-direction: column;
-    .right-contact {
-      margin-left: 0;
-      margin-top: 2.5rem;
-    }
-  }
-  .contact-content-con .right-contact .i-c-2 {
-    flex-direction: column;
-  }
-  .contact-content-con .right-contact .i-c-2 :last-child {
-    margin-left: 0;
-    margin-top: 1.5rem;
-  }
-
-  .section {
-    padding: 2rem 2.5rem;
-  }
-
-  .main-title {
-    h2 {
-      font-size: 2rem;
-      span {
-        font-size: 2.5rem;
-      }
-      .bg-text {
-        font-size: 3rem;
-      }
-    }
-  }
-}
-
-
-@media screen and (max-width: 1432px) {
-    .header{
-    padding: 0 !important;
-}
-    .section{
-    padding: 7rem 11rem;
-}
-
-    .contact-content-con {
-    flex-direction: column;
-    .right-contact {
-      margin-left: 0;
-      margin-top: 2.5rem;
-    }
-  }
-  .contact-content-con .right-contact .i-c-2 {
-    flex-direction: column;
-  }
-  .contact-content-con .right-contact .i-c-2 :last-child {
-    margin-left: 0;
-    margin-top: 1.5rem;
-  }
-
-@media screen and (max-width: 1070px) {
-    .about-container{
-    grid-template-columns: 1fr;
-        .right-about{
-        padding-top: 2.5rem;
-        }
-    }
-
-    .portfolios{
-    grid-template-columns: 1 fr, 1fr;
-    }
-
-    .blogs{
-    grid-template-columns: 1 fr, 1fr;
-    }
-
-    .main-title{
-    h2{
-    font-size: 4rem;
-        span: {
-            font-size: 4rem;
-        }
-        .bg-text{
-        font-size: 4.5rem;
-        }
-    }
-}
-
-@media screen and (max-width: 970px) {
+@media (max-width: 970px) {
     .section{
         padding: 7rem 6rem;
     }
@@ -1047,8 +934,7 @@ h4.stat-title {
     width: 90%;
   }
 
-  
-  .controls {
+    .controls {
     top: auto;
     bottom: 0;
     flex-direction: row;
@@ -1062,23 +948,53 @@ h4.stat-title {
     }
 }
 
-@media screen and (max-width: 700px) {
-    .section {
-    padding: 7rem 3rem;}
-    
-  .about-stats {
-    .progress-bars {
-      grid-template-columns: 1fr;
+@media (max-width: 1070px) {
+    .about-container{
+    grid-template-columns: 1fr;
+        .right-about{
+        padding-top: 2.5rem;
+        }
     }
+
+    .portfolios{
+    grid-template-columns: 1fr;
   }
-  .main-title{
+
+    .blogs{
+    grid-template-columns: 1fr;
+    }
+
+    .main-title{
     h2{
-        font-size: 3rem;
-        span{
-        font-size: 3rem;
+    font-size: 4rem;
+        span: {
+            font-size: 4rem;
         }
         .bg-text{
-        font-size: 4rem;}
-    }
+        font-size: 4.5rem;
+        }
     }
 }
+  
+  @media (max-width: 1432px) {
+      .header{
+      padding: 0 !important;
+  }
+      .section{
+      padding: 7rem 11rem;
+  }
+  
+      .contact-content-con {
+      flex-direction: column;
+      .right-contact {
+        margin-left: 0;
+        margin-top: 2.5rem;
+      }
+    }
+    .contact-content-con .right-contact .i-c-2 {
+      flex-direction: column;
+    }
+    .contact-content-con .right-contact .i-c-2 :last-child {
+      margin-left: 0;
+      margin-top: 1.5rem;
+    }
