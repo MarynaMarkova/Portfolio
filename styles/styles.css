@@ -229,16 +229,12 @@ section {
 .header-content .right-header .name {
   font-size: 3rem;
 }
-
-h1 {
-text-align: center;}
 .header-content .right-header .name span {
   color: var(--color-secondary);
 }
 .header-content .right-header p {
-  text-align: center;
   margin: 2rem;
-  line-height: 2rem;
+  line-height: 2 rem;
   color: var(--color-third);
 }
 
@@ -282,7 +278,6 @@ img {
 }
 .about-container .right-about .about-item .abt-text .small-text {
   padding-left: 3rem;
-  padding-top: 6rem;
   position: relative;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -671,16 +666,16 @@ color: var(--color-grey-1);}
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin: 0.4rem 0.4rem;
+  margin: 0 0.4rem;
   transition: var(--transition);
 }
-.contact-icon a:hover {
+ .contact-icon a:hover {
   background-color: var(--color-secondary);
 }
-.contact-icon a:hover i {
+ .contact-icon a:hover i {
   color: var(--color-primary);
 }
-.contact-icon a i {
+ .contact-icon a i {
   display: flex;
   align-items: center;
   justify-content: left;
