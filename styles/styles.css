@@ -723,7 +723,7 @@ color: var(--color-grey-1);}
 .contact-content-con .right-contact .i-c-2 :last-child {
   margin-left: 1.5rem;
 }
-.contact-content-con .right-contact .submit-btn {
+/* .contact-content-con .right-contact .submit-btn {
   display: flex;
   justify-content: flex-start;
 }
@@ -770,7 +770,7 @@ color: var(--color-grey-1);}
   height: 100%;
   background-color: var(--color-secondary);
   transform: translateX(0);
-}
+} */
 
 .main-title {
   text-align: center;
