@@ -617,6 +617,7 @@ h4.stat-title {
 }
 .contact-content-con .left-contact .contact-info .contact-block {
   margin: 2.75rem auto;
+  min-width: 300px;
 }
 .contact-content-con .left-contact .contact-info .contact-block .contact-item {
   display: flex;
@@ -817,6 +818,20 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+  #contact {
+    padding: 6rem 2rem 6rem 2rem; !important
+  }
+  
+  #cert-bg-text{
+  font-size: 3rem;}
+
+  #cert-cert-text{
+  font-size: 2rem;
+  }
+
+  #blogs, #portfolio, #about {
+  padding: 6rem 1rem 1rem 1rem;}
+
   header {
     padding: 0;
   }
@@ -846,6 +861,14 @@ button:hover {
     margin: 0 auto;
     width: 90%;
   }
+  .main-title h2 {
+    font-size: 1rem;
+  }
+
+  .main-title h2 .bg-text {
+    font-size: 2rem;
+  }
+
   .about-container {
     grid-template-columns: 1fr;
   }
@@ -871,6 +894,7 @@ button:hover {
   .contact-content-con {
     flex-direction: column;
   }
+
   .contact-content-con .right-contact {
     margin-left: 0;
     margin-top: 2.5rem;
@@ -882,10 +906,12 @@ button:hover {
     margin-left: 0;
     margin-top: 1.5rem;
   }
+
+  .contact-icons {
+    min-width: 200px;
+  }
   .section {
     padding: 2rem 2.5rem;
-  }
-  
   }
   .controls {
     top: auto;
@@ -902,16 +928,22 @@ button:hover {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 795px) {
   .main-title h2 {
     font-size: 2rem;
   }
-  .main-title h2 span {
-    font-size: 2.5rem;
-  }
+
   .main-title h2 .bg-text {
-    font-size: 2.5rem;
-}
+    font-size: 4rem;
+  }
+
+  .contact-content-con
+    .left-contact
+    .contact-info
+    .contact-block
+    .contact-item {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 970px) {
@@ -994,17 +1026,6 @@ button:hover {
   .blogs {
     grid-template-columns: 1fr;
   }
-
-  .main-title h2 {
-    font-size: 4rem;
-  }
-
-  .main-title span {
-    font-size: 4rem;
-  }
-  .main-title .bg-text {
-    font-size: 4.5rem;
-  }
 }
 
 @media (max-width: 1432px) {
@@ -1024,11 +1045,10 @@ button:hover {
     margin: 0 auto;
   }
 
-  .right-contact {
-    margin-left: 0;
-    margin-top: 2.5rem;
+  .contact-content-con .right-contact {
+    margin: 0 auto;
+    min-width: 100%;
   }
-
   .contact-content-con .right-contact .i-c-2 {
     flex-direction: column;
   }
