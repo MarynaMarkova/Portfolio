@@ -681,7 +681,7 @@ h4.stat-title {
 .contact-icon a i {
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   font-size: 1.3rem;
 }
 .contact-content-con .right-contact {
@@ -816,6 +816,11 @@ button:hover {
   background-color: var(--color-secondary);
   transform: translateX(0);
 }
+
+#open-code {
+  display: block;
+text-align: right;
+padding: 2rem;}
 
 @media (max-width: 600px) {
   #contact {
